@@ -1,0 +1,36 @@
+{
+  "name": "major-update-orchestrator",
+  "version": "0.1.0",
+  "description": "Safely plan, execute, verify, and roll out codebase-spanning technical updates in Codex.",
+  "author": {
+    "name": "Q2"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "orchestration",
+    "migration",
+    "upgrade",
+    "refactor",
+    "parallel",
+    "worktrees"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Major Update Orchestrator",
+    "shortDescription": "Safely deliver large technical updates.",
+    "longDescription": "Guides codebase-spanning migrations, upgrades, and refactors from assessment through rollout with measurable criteria and safe Codex collaboration.",
+    "developerName": "Q2",
+    "category": "Productivity",
+    "capabilities": [
+      "Planning",
+      "Code changes",
+      "Parallel orchestration"
+    ],
+    "defaultPrompt": [
+      "Plan a safe upgrade across this repository.",
+      "Orchestrate this cross-cutting refactor.",
+      "Show the burndown for the active major update."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

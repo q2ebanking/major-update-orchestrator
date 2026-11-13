@@ -1,0 +1,14 @@
+{
+  "name": "major-update-orchestrator",
+  "description": "Claude Code plugin for driving a major, codebase-spanning technical update through its full lifecycle.",
+  "owner": {
+    "name": "Q2"
+  },
+  "plugins": [
+    {
+      "name": "major-update-orchestrator",
+      "source": "./claude-plugin",
+      "description": "Guides a developer through the full lifecycle of a major, codebase-spanning technical update — decomposing it into independent work units and driving them in parallel with subagents, safely. Platform-agnostic; discovers session capabilities and falls back gracefully."
+    }
+  ]
+}

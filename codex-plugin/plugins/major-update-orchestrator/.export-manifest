@@ -1,0 +1,13 @@
+[include]
+.codex-plugin/
+README.md
+skills/
+
+[exclude]
+scripts/validate.py
+CHANGELOG.md
+.export-manifest
+
+[allow-source-refs]
+# README.md tells a maintainer where the unshipped structural validator lives.
+scripts/validate.py

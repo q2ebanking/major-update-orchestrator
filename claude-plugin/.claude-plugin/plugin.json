@@ -1,0 +1,18 @@
+{
+  "name": "major-update-orchestrator",
+  "version": "0.1.0",
+  "description": "Guides a developer through the full lifecycle of a major, codebase-spanning technical update — decomposing it into independent work units and driving them in parallel with subagents, safely. Platform-agnostic; discovers session capabilities and falls back gracefully.",
+  "author": {
+    "name": "Q2"
+  },
+  "keywords": [
+    "orchestration",
+    "parallel",
+    "subagents",
+    "migration",
+    "upgrade",
+    "refactor",
+    "tech-debt",
+    "worktrees"
+  ]
+}

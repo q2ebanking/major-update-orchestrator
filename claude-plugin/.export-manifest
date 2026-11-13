@@ -1,0 +1,11 @@
+[include]
+.claude-plugin/
+agents/
+commands/
+skills/
+README.md
+
+[exclude]
+scripts/validate.py
+CHANGELOG.md
+.export-manifest
