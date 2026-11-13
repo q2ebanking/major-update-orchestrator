@@ -40,11 +40,14 @@ writes; workers perform bounded implementation and verification tasks.
   capability when it genuinely fits; otherwise follow the bundled procedure or
   provide a user handoff. See `references/skill-discovery.md`.
 - Before starting work in each lifecycle phase, announce the phase and render
-  its **phase-entry skill table**. Resolve the capability-matched and
-  assistive candidates relevant to that phase by scanning the full
-  session-available skill list, not only the capability map. When more than
-  one candidate plausibly fills the same role, ask the user which to use
-  rather than silently choosing. See `references/skill-discovery.md`.
+  its **phase-entry skill table** with the skills you plan to attempt. Resolve
+  capability-matched and assistive candidates by scanning the full
+  session-available skill list, including user-specific skills not named in
+  this plugin. Ask whether the user would prefer any other skills and wait for
+  their response before phase work. Check any suggested skill against the
+  active session and revise the proposal before proceeding. Ask the user to
+  choose only among multiple unordered candidates for the same role; follow
+  explicitly ordered fallback chains in order. See `references/skill-discovery.md`.
 - During Assess, if no usable ticketing technology is discovered, ask once
   whether the update should use a tracker or remain ticketless. If no usable
   remote-source-repository API or CLI is discovered, ask once which remote

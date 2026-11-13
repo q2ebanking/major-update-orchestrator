@@ -56,7 +56,7 @@ Match by what the phase is trying to accomplish, not a fixed list. Examples:
 
 ## Phase-entry skill table
 
-Before starting a phase's work, resolve and render a table of the skills driving it — this is what SKILL.md's "First Move Every Session" step 3 and the Lifecycle section point to:
+Before starting a phase's work, scan the full session-available skill list, resolve relevant capability and assistive skills, and render a table of the skills you plan to attempt — including user-specific skills not named in this plugin. This is what SKILL.md's "First Move Every Session" step 3 and the Lifecycle section point to:
 
 | Role / function | Candidate skill(s) | Type | Selected |
 |---|---|---|---|
@@ -64,11 +64,11 @@ Before starting a phase's work, resolve and render a table of the skills driving
 
 Build one row per role the phase actually needs this time — only the capability-map and assistive matches relevant to the work at hand, not every row in the map. For each row:
 
-- **One candidate** → select it; no prompt needed.
-- **Multiple plausible candidates** — two independent session skills that could both serve the same role, or a capability-map entry listing alternatives without an order — stop and ask the user which to use via `AskUserQuestion` before proceeding. An explicitly ordered fallback chain is not ambiguous: use the first available candidate in order. Never silently choose among unordered alternatives.
+- **One candidate** → select it; no candidate-choice prompt is needed.
+- **Multiple plausible candidates** — two independent session skills that could both serve the same role, or a capability-map entry listing alternatives without an order — ask the user which to use via `AskUserQuestion` before proceeding. An explicitly ordered fallback chain is not ambiguous: use the first available candidate in order.
 - **No candidate** → mark "—" and proceed on the bundled fallback (capability rows) or simply skip it (assistive rows); a missing assistive skill never blocks the phase.
 
-Show the resolved table to the user, then proceed with the phase's work.
+Show the resolved table and ask: **"Do you have any other skills you'd prefer me to use for this phase?"** Wait for the user's response before starting phase work. If the user names another skill, check whether it is available in the active session and fits the phase, then update the table and confirm the revised proposal. If it is unavailable, say so and ask how they want to proceed.
 
 ## Reuse-vs-author decision (skill gaps)
 

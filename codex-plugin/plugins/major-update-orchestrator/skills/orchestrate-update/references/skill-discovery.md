@@ -48,8 +48,10 @@ an absent assistive skill never blocks progress.
 
 ## Phase-entry skill table
 
-Before starting work in a lifecycle phase, resolve and show the skills driving
-that phase:
+Before starting work in a lifecycle phase, scan the full session-available
+skill list, resolve relevant capability and assistive skills, and show the
+skills you plan to attempt. Include user-specific skills even when they are
+not named in this plugin:
 
 | Role / function | Candidate skill(s) | Type | Selected |
 |---|---|---|---|
@@ -65,4 +67,9 @@ Include only roles relevant to the current phase. For each role:
 - No candidate: record `—`; use the bundled fallback for a capability role or
   skip an assistive role.
 
-Show the resolved table, then begin the phase.
+Show the resolved table and ask: **"Do you have any other skills you'd prefer
+me to use for this phase?"** Wait for the user's response before starting
+phase work. If the user names another skill, check whether it is available in
+the active session and fits the phase, then update the table and confirm the
+revised proposal. If it is unavailable, say so and ask how they want to
+proceed.
