@@ -24,14 +24,14 @@ session offers, use it if present, fall back gracefully if not. Never hard-requi
 |---|---|---|
 | Recon (large repos) | `Explore` / recon subagent | Inline probes + interview |
 | Baseline metric capture (expensive) | Profiling/measurement subagent | Inline measurement commands |
-| Guided design | `uux-planning-docs` (concepts) | Bundled `guided-design.md` |
+| Guided design | `grill-with-docs`; if absent, **superpowers:brainstorming** | Bundled `guided-design.md` |
 | Decomposition / plan | **superpowers:writing-plans** | Bundled planning-subagent prompt (`plan.md`) |
 | Parallel dispatch | **superpowers:dispatching-parallel-agents** | Bundled fan-out (`parallel-orchestration.md`) |
 | Worktree isolation | **superpowers:using-git-worktrees** | Bundled worktree commands (`parallel-orchestration.md`) |
 | TDD | **superpowers:test-driven-development** | Bundled RED→GREEN→refactor |
 | Skill authoring | **superpowers:writing-skills** | Bundled minimal SKILL.md template (below) |
 | Whole-change verify | **superpowers:verification-before-completion** | Bundled verify checklist (`verify.md`) |
-| Code review | `code-review` / `platform-framework-mr-review` / **superpowers:requesting-code-review** | Bundled review checklist (`verify.md`) |
+| Code review | `code-review` / **superpowers:requesting-code-review** | Bundled review checklist (`verify.md`) |
 | E2E regression | Playwright / E2E runner or regression MCP, or an in-repo invocation script | Prompt user to run their suite and report |
 | E2E pipeline kickoff (post-MR) | In-repo trigger script, or a session skill that initiates the pipeline against an MR (e.g. a Playwright-pipeline-kickoff skill) | Prompt user to kick off the pipeline manually and report |
 | E2E pipeline results review (post-MR) | In-repo results script, or a session skill that reviews pipeline results | Prompt user to review the pipeline results manually and report |
@@ -65,7 +65,7 @@ Before starting a phase's work, resolve and render a table of the skills driving
 Build one row per role the phase actually needs this time — only the capability-map and assistive matches relevant to the work at hand, not every row in the map. For each row:
 
 - **One candidate** → select it; no prompt needed.
-- **Multiple plausible candidates** — two session skills that could both serve the same role, or a capability-map entry listing more than one match (e.g. `code-review` / `platform-framework-mr-review`) — stop and ask the user which to use via `AskUserQuestion` before proceeding. Never silently default to the first-listed one.
+- **Multiple plausible candidates** — two independent session skills that could both serve the same role, or a capability-map entry listing alternatives without an order — stop and ask the user which to use via `AskUserQuestion` before proceeding. An explicitly ordered fallback chain is not ambiguous: use the first available candidate in order. Never silently choose among unordered alternatives.
 - **No candidate** → mark "—" and proceed on the bundled fallback (capability rows) or simply skip it (assistive rows); a missing assistive skill never blocks the phase.
 
 Show the resolved table to the user, then proceed with the phase's work.

@@ -7,6 +7,7 @@ integration exists.
 | Need | Prefer when available | Fallback |
 |---|---|---|
 | Repository survey | exploration/recon skill or worker | targeted file and Git inspection |
+| Guided design | `mattpocock-skills:grilling` to grill against project evidence and record decisions in the design artifact; if unavailable, `superpowers:brainstorming` | bundled Guided design reference |
 | Planning | planning/design skill | bundled Plan and Guided design references |
 | Independent plan review | read-only planning/review worker or skill | bundled plan-review procedure |
 | Parallel work | Codex collaboration | serial waves with the same isolation rules |
@@ -59,7 +60,8 @@ Include only roles relevant to the current phase. For each role:
 - One plausible candidate: select it.
 - Multiple plausible candidates: ask the user to choose with
   `request_user_input` when available; otherwise ask one concise direct
-  question. Do not silently default to a candidate.
+  question. Do not silently choose among unordered candidates. For an
+  explicitly ordered fallback chain, select the first available candidate.
 - No candidate: record `—`; use the bundled fallback for a capability role or
   skip an assistive role.
 
