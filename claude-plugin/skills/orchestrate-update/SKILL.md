@@ -95,7 +95,9 @@ At any point — any phase — the user may request a model & token usage report
 - Whole-change verification → **superpowers:verification-before-completion**
 - Code review → **superpowers:requesting-code-review** or a session code-review skill/agent
 - Diagnosis → **superpowers:systematic-debugging**
-- Guided design (concepts) → **uux-planning-docs** if present
+- Guided design (concepts) → **grill-with-docs** if present; otherwise
+  **superpowers:brainstorming** if present, then the bundled Guided design
+  reference
 
 See `references/skill-discovery.md` for the reuse-vs-author decision and the full capability↔fallback map.
 

@@ -178,6 +178,32 @@ For long-running commands, use Codex's tracked command/session execution
 directly. Do not use `nohup`, `disown`, or an untracked shell detach; wait for
 the tracked process to finish before grading it.
 
+## Reused Skills (discover-then-fallback)
+
+**All of these skills are optional**; the orchestrator runs with none of them
+present. Inspect the active Codex session's available skills and chain to a
+matching skill when one is available. Otherwise use the bundled procedure or
+the Codex capability described above. Match by capability, not by an assumed
+exact name:
+
+- Planning → **superpowers:writing-plans**
+- Parallel dispatch → **superpowers:dispatching-parallel-agents** or Codex
+  native collaboration
+- Worktree isolation → **superpowers:using-git-worktrees**
+- TDD → **superpowers:test-driven-development**
+- Skill authoring for skill gaps → **superpowers:writing-skills**
+- Whole-change verification → **superpowers:verification-before-completion**
+- Code review → **superpowers:requesting-code-review** or an available
+  session code-review skill/agent
+- Diagnosis → **superpowers:systematic-debugging**
+- Guided design → **mattpocock-skills:grilling** to grill against project
+  evidence and record the decisions in the design artifact; if unavailable,
+  use **superpowers:brainstorming**; if neither skill is available, use the
+  bundled Guided design reference
+
+See `references/skill-discovery.md` for the phase-entry skill table, capability
+discovery, and bundled fallbacks.
+
 ## 1. Assess
 
 Load `references/assess.md`. Inspect the codebase, CI configuration, package
