@@ -1,6 +1,6 @@
 {
   "name": "major-update-orchestrator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Safely plan, execute, verify, and roll out codebase-spanning technical updates in Codex.",
   "author": {
     "name": "Q2"
