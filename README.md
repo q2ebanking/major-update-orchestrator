@@ -114,6 +114,10 @@ Prefer `/update` for normal use.
 5. **Roll out** — open the MR/PR(s) linked to the tickets (or hand off a ready-to-paste
    description), transition tickets, and finalize the living plan doc.
 
+![Detailed flow chart of the major-update-orchestrator workflow](major-update-workflow.png)
+
+*Full workflow, including the gates and failure loops. An editable [SVG version](major-update-workflow.svg) is also available.*
+
 ## Two authoritative documents
 
 - **Design artifact** — *why / architecture / tradeoffs / risks*.
